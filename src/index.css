@@ -1,96 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
-
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    /* SnapBack Fitness Design System */
+    --background: 0 0% 4%;
+    --foreground: 0 0% 100%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card: 270 40% 8%;
+    --card-foreground: 0 0% 100%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover: 270 40% 8%;
+    --popover-foreground: 0 0% 100%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    --primary: 271 62% 47%;
+    --primary-foreground: 0 0% 100%;
+    --primary-deep: 271 70% 30%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 330 82% 52%;
+    --secondary-foreground: 0 0% 100%;
+    --secondary-light: 330 86% 70%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --muted: 260 20% 15%;
+    --muted-foreground: 240 10% 60%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    --accent: 330 82% 52%;
+    --accent-foreground: 0 0% 100%;
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --border: 271 30% 20%;
+    --input: 271 30% 20%;
+    --ring: 271 62% 47%;
 
     --radius: 0.5rem;
 
+    --color-dark: #0D0D0D;
+    --color-dark-mid: #1A1025;
+    --color-off-white: #F8F5FF;
+    --color-mid: #6B6B8A;
+    --color-gold: #FFD700;
+
     --sidebar-background: 0 0% 98%;
-
     --sidebar-foreground: 240 5.3% 26.1%;
-
     --sidebar-primary: 240 5.9% 10%;
-
     --sidebar-primary-foreground: 0 0% 98%;
-
     --sidebar-accent: 240 4.8% 95.9%;
-
     --sidebar-accent-foreground: 240 5.9% 10%;
-
     --sidebar-border: 220 13% 91%;
-
     --sidebar-ring: 217.2 91.2% 59.8%;
-  }
 
-  .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
+    /* Typography */
+    --font-display: 'Bebas Neue', Impact, sans-serif;
+    --font-body: 'Inter', system-ui, -apple-system, sans-serif;
 
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
-
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
-
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
-
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
-
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
-
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
-
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
-
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    /* Sizes */
+    --text-hero: clamp(3.5rem, 10vw, 8rem);
+    --text-h1: clamp(2.5rem, 6vw, 5rem);
+    --text-h2: clamp(2rem, 4vw, 3.5rem);
+    --text-h3: clamp(1.4rem, 2.5vw, 2rem);
   }
 }
 
@@ -101,5 +73,77 @@ All colors MUST be HSL.
 
   body {
     @apply bg-background text-foreground;
+    font-family: var(--font-body);
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-display);
+    letter-spacing: 0.02em;
+  }
+}
+
+@layer utilities {
+  .font-display {
+    font-family: var(--font-display);
+  }
+
+  .font-body {
+    font-family: var(--font-body);
+  }
+
+  .text-hero {
+    font-size: var(--text-hero);
+    line-height: 0.9;
+  }
+
+  .text-h1 {
+    font-size: var(--text-h1);
+    line-height: 0.95;
+  }
+
+  .text-h2 {
+    font-size: var(--text-h2);
+    line-height: 1;
+  }
+
+  .text-h3 {
+    font-size: var(--text-h3);
+    line-height: 1.1;
+  }
+
+  .gradient-cta {
+    background: linear-gradient(90deg, hsl(var(--primary)), hsl(var(--secondary)));
+  }
+
+  .gradient-hero {
+    background: linear-gradient(135deg, #0D0D0D 0%, #1A1025 50%, #4A1482 100%);
+  }
+
+  .gradient-card {
+    background: linear-gradient(180deg, rgba(123,47,190,0.15) 0%, rgba(233,30,140,0.05) 100%);
+  }
+
+  .bg-dark {
+    background-color: var(--color-dark);
+  }
+
+  .bg-dark-mid {
+    background-color: var(--color-dark-mid);
+  }
+
+  .bg-off-white {
+    background-color: var(--color-off-white);
+  }
+
+  .text-mid {
+    color: var(--color-mid);
+  }
+
+  .text-gold {
+    color: var(--color-gold);
+  }
+
+  .tracking-wide-custom {
+    letter-spacing: 0.1em;
   }
 }

@@ -1,16 +1,37 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import Navbar from "@/components/layout/Navbar";
+import Footer from "@/components/layout/Footer";
+import FloatingWhatsApp from "@/components/layout/FloatingWhatsApp";
+import HeroSection from "@/components/sections/HeroSection";
+import PainPointsSection from "@/components/sections/PainPointsSection";
+import MeetPatloSection from "@/components/sections/MeetPatloSection";
+import ServicesOverview from "@/components/sections/ServicesOverview";
+import TransformationSection from "@/components/sections/TransformationSection";
+import DifferentiatorsSection from "@/components/sections/DifferentiatorsSection";
+import StatsBar from "@/components/sections/StatsBar";
+import ShopTeaser from "@/components/sections/ShopTeaser";
+import EventsPreview from "@/components/sections/EventsPreview";
+import InstagramStrip from "@/components/sections/InstagramStrip";
+import LeadMagnetSection from "@/components/sections/LeadMagnetSection";
 
-// IMPORTANT: Fully REPLACE this with your own code
-const PlaceholderIndex = () => {
-  // PLACEHOLDER: Replace this entire return statement with the user's app.
-  // The inline background color is intentionally not part of the design system.
+const Index = () => {
   return (
-    <div className="flex min-h-screen items-center justify-center" style={{ backgroundColor: '#fcfbf8' }}>
-      <img data-lovable-blank-page-placeholder="REMOVE_THIS" src="/placeholder.svg" alt="Your app will live here!" />
+    <div className="min-h-screen">
+      <Navbar />
+      <HeroSection />
+      <PainPointsSection />
+      <MeetPatloSection />
+      <ServicesOverview />
+      <TransformationSection />
+      <DifferentiatorsSection />
+      <StatsBar />
+      <ShopTeaser />
+      <EventsPreview />
+      <InstagramStrip />
+      <LeadMagnetSection />
+      <Footer />
+      <FloatingWhatsApp />
     </div>
   );
 };
-
-const Index = PlaceholderIndex;
 
 export default Index;
