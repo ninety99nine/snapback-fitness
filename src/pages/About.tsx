@@ -197,7 +197,7 @@ const About = () => {
               initial={{ opacity: 0, x: -30 }}
               animate={storyInView ? { opacity: 1, x: 0 } : {}}
               transition={{ delay: 0.1 }}
-              className="relative flex"
+              className="relative flex items-end"
             >
               <img
                 src={whereItStarted}
