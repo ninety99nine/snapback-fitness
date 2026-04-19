@@ -24,6 +24,7 @@ const SERVICES = [
     id: "virtual-training",
     num: "01",
     name: "VIRTUAL TRAINING",
+    image: "/images/virtual training.png",
     tagline: "Full coaching from anywhere in Botswana.",
     description:
       "You don't need to be in Maun to work with me. I build your personalised programme, check in with you regularly on WhatsApp, and adjust your plan as you progress — all remotely. This is my most popular option because it fits real life.",
@@ -49,6 +50,7 @@ const SERVICES = [
     id: "meal-plans",
     num: "02",
     name: "MEAL PLANS",
+    image: "/images/meal-plan.png",
     tagline: "Customised nutrition built for your body and goals.",
     description:
       "What you eat matters as much as how you train. I create a meal plan around your body, your goals, and your lifestyle — not a generic template. Every plan comes with practical guidance you can actually follow in day-to-day life.",
@@ -197,15 +199,34 @@ function ServiceSection({ s, index, nextBg }: { s: typeof SERVICES[0]; index: nu
           >
             <div className="rounded-3xl bg-white shadow-[0_8px_32px_rgba(123,47,190,0.09)] border border-[#F0EBFF] h-full flex flex-col overflow-hidden">
 
-              {/* Soft top accent area */}
-              <div className="px-7 pt-7 pb-6" style={{ background: "linear-gradient(160deg, #FAF5FF 0%, #FFF0F8 100%)" }}>
-                {/* Plan pill */}
-                <span className="inline-flex items-center gap-1.5 gradient-cta text-white px-4 py-1.5 rounded-full font-body text-xs font-semibold tracking-wide-custom uppercase mb-5">
-                  <s.Icon className="h-3 w-3" />
-                  {s.name}
-                </span>
+              {/* Image or gradient top */}
+              {s.image ? (
+                <div className="relative h-52 overflow-hidden bg-gradient-to-br from-primary/10 via-secondary/5 to-[#FFF0F8]">
+                  <img
+                    src={s.image}
+                    alt={s.name}
+                    className="h-full w-full object-cover object-top"
+                  />
+                  <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-white/60 via-transparent to-transparent" />
+                  {/* Plan pill overlaid on image */}
+                  <div className="absolute bottom-4 left-5">
+                    <span className="inline-flex items-center gap-1.5 gradient-cta text-white px-4 py-1.5 rounded-full font-body text-xs font-semibold tracking-wide-custom uppercase shadow-md">
+                      <s.Icon className="h-3 w-3" />
+                      {s.name}
+                    </span>
+                  </div>
+                </div>
+              ) : (
+                <div className="px-7 pt-7 pb-0" style={{ background: "linear-gradient(160deg, #FAF5FF 0%, #FFF0F8 100%)" }}>
+                  <span className="inline-flex items-center gap-1.5 gradient-cta text-white px-4 py-1.5 rounded-full font-body text-xs font-semibold tracking-wide-custom uppercase mb-5">
+                    <s.Icon className="h-3 w-3" />
+                    {s.name}
+                  </span>
+                </div>
+              )}
 
-                {/* Price */}
+              {/* Price area */}
+              <div className="px-7 pt-5 pb-4" style={!s.image ? { background: "linear-gradient(160deg, #FAF5FF 0%, #FFF0F8 100%)" } : {}}>
                 <div className="flex items-end gap-1.5">
                   <span className="font-display text-5xl text-[#0D0D0D] leading-none">{s.price}</span>
                   <span className="font-body text-sm text-[#0D0D0D]/40 mb-1">{s.period}</span>
