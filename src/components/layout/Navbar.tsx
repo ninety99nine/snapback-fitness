@@ -1,14 +1,14 @@
 import { useState, useEffect } from "react";
-import { Link, useLocation } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { Menu, X, MessageCircle } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 
 const navLinks = [
   { label: "HOME", path: "/" },
+  { label: "MY STORY", path: "/about" },
   { label: "SERVICES", path: "/services" },
+  { label: "CHALLENGES", path: "/challenges" },
   { label: "TRANSFORMATION", path: "/transformation" },
-  { label: "EVENTS", path: "/events" },
-  { label: "BLOG", path: "/blog" },
   { label: "SHOP", path: "/shop" },
   { label: "CONTACT", path: "/contact" },
 ];
@@ -17,6 +17,16 @@ const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
   const location = useLocation();
+  const navigate = useNavigate();
+
+  const handleStartJourney = () => {
+    setMobileOpen(false);
+    if (location.pathname === "/") {
+      document.getElementById("who-we-serve")?.scrollIntoView({ behavior: "smooth", block: "start" });
+    } else {
+      navigate("/", { state: { scrollTo: "who-we-serve" } });
+    }
+  };
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 50);
@@ -32,7 +42,9 @@ const Navbar = () => {
     <>
       <nav
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-          scrolled ? "bg-dark/95 backdrop-blur-sm" : "bg-transparent"
+          scrolled
+            ? "bg-[#0D0D0D]/80 backdrop-blur-sm shadow-md"
+            : "bg-[#0D0D0D]/10 backdrop-blur-sm"
         }`}
       >
         <div className="container mx-auto flex items-center justify-between py-4 px-4 lg:px-8">
@@ -65,12 +77,13 @@ const Navbar = () => {
               <MessageCircle className="w-5 h-5 text-foreground" />
               <span className="absolute inset-0 rounded-full border-2 border-secondary animate-pulse-ring" />
             </a>
-            <Link
-              to="/services"
+            <button
+              type="button"
+              onClick={handleStartJourney}
               className="gradient-cta px-6 py-2.5 rounded-full font-body text-xs font-semibold tracking-wide-custom text-foreground hover:scale-105 transition-transform"
             >
               START MY JOURNEY
-            </Link>
+            </button>
           </div>
 
           {/* Mobile hamburger */}
@@ -90,7 +103,7 @@ const Navbar = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="fixed inset-0 z-40 bg-dark/98 flex flex-col items-center justify-center gap-8"
+            className="fixed inset-0 z-40 bg-[#0D0D0D] flex flex-col items-center justify-center gap-8"
           >
             {navLinks.map((link, i) => (
               <motion.div
@@ -107,12 +120,13 @@ const Navbar = () => {
                 </Link>
               </motion.div>
             ))}
-            <Link
-              to="/services"
+            <button
+              type="button"
+              onClick={handleStartJourney}
               className="gradient-cta px-8 py-3 rounded-full font-body text-sm font-semibold tracking-wide-custom text-foreground mt-4"
             >
               START MY JOURNEY
-            </Link>
+            </button>
           </motion.div>
         )}
       </AnimatePresence>

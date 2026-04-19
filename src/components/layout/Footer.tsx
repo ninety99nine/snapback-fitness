@@ -19,18 +19,24 @@ const Footer = () => {
 
           {/* Navigation */}
           <div>
-            <div className="flex flex-col gap-3">
-              {["Home", "Services", "Transformation", "Events", "Blog", "Shop", "Contact"].map(
-                (item) => (
-                  <Link
-                    key={item}
-                    to={item === "Home" ? "/" : `/${item.toLowerCase()}`}
-                    className="font-body text-sm text-foreground/70 hover:text-secondary transition-colors"
-                  >
-                    {item}
-                  </Link>
-                )
-              )}
+            <div className="grid grid-cols-2 gap-x-8 gap-y-3">
+              {[
+                { label: "Home", path: "/" },
+                { label: "My Story", path: "/about" },
+                { label: "Services", path: "/services" },
+                { label: "Challenges", path: "/challenges" },
+                { label: "Transformation", path: "/transformation" },
+                { label: "Shop", path: "/shop" },
+                { label: "Contact", path: "/contact" },
+              ].map((item) => (
+                <Link
+                  key={item.path}
+                  to={item.path}
+                  className="font-body text-sm text-foreground/70 hover:text-secondary transition-colors"
+                >
+                  {item.label}
+                </Link>
+              ))}
             </div>
             <div className="flex gap-4 mt-6">
               <a href="https://instagram.com/snapbackwithmrsk" target="_blank" rel="noopener noreferrer" className="text-foreground/70 hover:text-secondary transition-colors">
