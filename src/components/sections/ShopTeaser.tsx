@@ -99,6 +99,7 @@ const ShopTeaser = () => {
                   src={product.img}
                   alt={product.alt}
                   className="w-full h-full object-cover"
+                  loading="lazy"
                 />
                 {/* Physical badge */}
                 <div className="absolute bottom-3 left-3 flex items-center gap-1.5 rounded-full bg-black/60 backdrop-blur-sm px-3 py-1">

@@ -121,6 +121,7 @@ const EventsPreview = () => {
                   src={e.image}
                   alt={e.name}
                   className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
+                  loading="lazy"
                 />
                 {/* Gradient overlay fading into card */}
                 <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-[#130D1E] via-[#130D1E]/30 to-transparent" />

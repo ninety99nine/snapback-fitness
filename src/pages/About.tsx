@@ -175,6 +175,8 @@ const About = () => {
                 src={myStory}
                 alt="Patlo Kgosidialwa — SnapBack Fitness founder"
                 className="max-h-[620px] w-auto object-contain drop-shadow-2xl"
+                loading="eager"
+                fetchPriority="high"
               />
             </motion.div>
           </div>
@@ -203,6 +205,7 @@ const About = () => {
                 src={whereItStarted}
                 alt="Patlo during her fitness journey"
                 className="w-full h-auto object-contain"
+                loading="lazy"
               />
               {/* Glow */}
               <div

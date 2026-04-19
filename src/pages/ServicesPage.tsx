@@ -208,6 +208,7 @@ function ServiceSection({ s, index, nextBg }: { s: typeof SERVICES[0]; index: nu
                     src={s.image}
                     alt={s.name}
                     className="h-full w-full object-cover object-top"
+                    loading="lazy"
                   />
                   <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-white/60 via-transparent to-transparent" />
                   {/* Plan pill overlaid on image */}
@@ -364,6 +365,8 @@ export default function ServicesPage() {
                   alt={ctx.alt}
                   className="w-auto object-contain object-bottom drop-shadow-2xl"
                   style={{ height: "clamp(500px, 68vh, 700px)", marginBottom: "-4rem" }}
+                  loading="eager"
+                  fetchPriority="high"
                 />
               </motion.div>
             )}

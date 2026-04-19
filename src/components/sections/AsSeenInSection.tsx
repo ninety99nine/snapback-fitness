@@ -128,6 +128,7 @@ const AsSeenInSection = () => {
                       src={features[mobileSlide].img}
                       alt={features[mobileSlide].alt}
                       className="w-full h-full object-cover object-top"
+                      loading="lazy"
                     />
                     <div className="absolute inset-0 flex items-center justify-center rounded-2xl bg-black/25">
                       <ZoomIn className="h-8 w-8 text-white drop-shadow-lg" strokeWidth={1.5} />
@@ -202,6 +203,7 @@ const AsSeenInSection = () => {
                       src={img}
                       alt={alt}
                       className="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-105"
+                      loading="lazy"
                     />
                     {/* Hover overlay */}
                     <div className="pointer-events-none absolute inset-0 flex items-center justify-center rounded-2xl bg-black/0 transition-all duration-300 group-hover:bg-black/35">

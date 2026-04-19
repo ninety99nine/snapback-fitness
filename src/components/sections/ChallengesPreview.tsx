@@ -141,6 +141,7 @@ const ChallengesPreview = () => {
                   src={c.image}
                   alt={c.name}
                   className="h-full w-full object-cover object-top transition-transform duration-700 group-hover:scale-105"
+                  loading="lazy"
                 />
                 <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-[#130D1E] via-[#130D1E]/20 to-transparent" />
                 <div

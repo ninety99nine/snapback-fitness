@@ -50,6 +50,7 @@ const InstagramStrip = () => {
                 alt={`Instagram post ${i + 1}`}
                 className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
                 style={{ objectPosition: [0, 2, 5].includes(i) ? '50% 25%' : 'top' }}
+                loading="lazy"
               />
             </motion.a>
           ))}

@@ -83,10 +83,11 @@ const HeroSection = () => {
             className="hidden lg:flex justify-end"
           >
             <img
-              src="/images/hero.png"
+              src="/images/where-it-started.png"
               alt="Snapback Fitness transformation"
               className="max-w-lg w-auto object-contain drop-shadow-[0_25px_60px_rgba(0,0,0,0.35)]"
               loading="eager"
+              fetchPriority="high"
             />
           </motion.div>
         </div>

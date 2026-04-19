@@ -262,6 +262,7 @@ const Challenges = () => {
                       src={c.image}
                       alt={c.name}
                       className="h-full w-full object-cover object-top"
+                      loading="lazy"
                     />
                     <div className="pointer-events-none absolute inset-0 bg-gradient-to-r from-transparent via-transparent to-[#130D1E] hidden lg:block" />
                     <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-[#130D1E] via-[#130D1E]/20 to-transparent lg:hidden" />

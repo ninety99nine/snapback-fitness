@@ -314,6 +314,7 @@ const Shop = () => {
                       src={product.image}
                       alt={product.name}
                       className="h-full w-full mx-auto object-contain transition-transform duration-500 hover:scale-105"
+                      loading="lazy"
                     />
                     <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-[#130D1E] via-transparent to-transparent" />
 

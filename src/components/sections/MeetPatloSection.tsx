@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 import { ArrowRight } from "lucide-react";
-const foundedByAMom = "/images/founded-by-a-mom.png";
+const myStory = "/images/my-story.png";
 
 const MeetPatloSection = () => {
   const ref = useRef(null);
@@ -71,9 +71,10 @@ const MeetPatloSection = () => {
             className="rounded-lg flex items-center justify-center w-full mb-12 lg:mb-0"
           >
             <img
-              src={foundedByAMom}
+              src={myStory}
               alt="Patlo from SnapBack Fitness"
               className="max-w-xs h-auto object-contain object-left"
+              loading="lazy"
             />
           </motion.div>
 
