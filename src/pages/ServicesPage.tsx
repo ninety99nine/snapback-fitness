@@ -76,6 +76,7 @@ const SERVICES = [
     id: "workout-plans",
     num: "03",
     name: "WORKOUT PLANS",
+    image: "/images/workput-plans.png",
     tagline: "Structured programmes you can do at home or the gym.",
     description:
       "A well-built programme makes all the difference. I design structured weekly workouts with the right balance of training and rest — whether you're at home with no equipment or at a gym. You get the plan; you train at your own pace.",
@@ -101,6 +102,7 @@ const SERVICES = [
     id: "personal-training",
     num: "04",
     name: "PERSONAL TRAINING",
+    image: "/images/personal-training.png",
     tagline: "One-on-one sessions in Maun — fully focused on you.",
     description:
       "If you're in Maun and want the most hands-on experience, this is it. We train together in person. I coach your form, push you when you need it, and build sessions around exactly what your body needs. Nothing cookie-cutter.",
@@ -135,7 +137,7 @@ function ServiceSection({ s, index, nextBg }: { s: typeof SERVICES[0]; index: nu
     <section
       id={s.id}
       ref={ref}
-      className={`relative overflow-hidden pt-20 lg:pt-28 pb-28 lg:pb-36 ${isEven ? "bg-off-white" : "bg-white"}`}
+      className={`relative overflow-hidden pt-12 lg:pt-16 pb-28 lg:pb-32 ${isEven ? "bg-off-white" : "bg-white"}`}
     >
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
 
@@ -147,7 +149,7 @@ function ServiceSection({ s, index, nextBg }: { s: typeof SERVICES[0]; index: nu
             initial={{ opacity: 0, y: 24 }}
             animate={inView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.5, delay: 0.1 }}
-            className="lg:col-span-7 space-y-8"
+            className="lg:col-span-7 space-y-8 flex flex-col justify-center"
           >
             {/* Service header */}
             <div>
@@ -201,7 +203,7 @@ function ServiceSection({ s, index, nextBg }: { s: typeof SERVICES[0]; index: nu
 
               {/* Image or gradient top */}
               {s.image ? (
-                <div className="relative h-52 overflow-hidden bg-gradient-to-br from-primary/10 via-secondary/5 to-[#FFF0F8]">
+                <div className="relative h-72 overflow-hidden bg-gradient-to-br from-primary/10 via-secondary/5 to-[#FFF0F8]">
                   <img
                     src={s.image}
                     alt={s.name}
