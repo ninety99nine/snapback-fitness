@@ -16,5 +16,5 @@ export const siteConfig = {
    * Direct URL to the free postpartum guide PDF.
    * Can be a relative path ("/snapback-guide.pdf") or a full URL.
    */
-  guidePdfUrl: "/snapback-guide.pdf",
+  guidePdfUrl: "/downloads/free-guide.pdf",
 };

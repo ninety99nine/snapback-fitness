@@ -16,6 +16,7 @@ import Contact from "./pages/Contact.tsx";
 import About from "./pages/About.tsx";
 import Challenges from "./pages/Challenges.tsx";
 import Shop from "./pages/Shop.tsx";
+import FreeGuide from "./pages/FreeGuide.tsx";
 
 const queryClient = new QueryClient();
 
@@ -44,6 +45,7 @@ const App = () => (
           <Route path="/about" element={<About />} />
           <Route path="/challenges" element={<Challenges />} />
           <Route path="/shop" element={<Shop />} />
+          <Route path="/free-guide" element={<FreeGuide />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
