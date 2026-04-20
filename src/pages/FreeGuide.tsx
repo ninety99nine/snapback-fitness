@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { Download, CheckCircle2, ArrowLeft, Loader2 } from "lucide-react";
+import SEO from "@/components/SEO";
 import { Link } from "react-router-dom";
 import { useState } from "react";
 import Navbar from "@/components/layout/Navbar";
@@ -33,6 +34,11 @@ export default function FreeGuide() {
 
   return (
     <div className="min-h-screen bg-off-white">
+      <SEO
+        title="Free Fitness Starter Guide — Download Now"
+        description="Download your free SnapBack Fitness guide covering strength, mindset, and nutrition. No sign-up required. Just tap and it's yours."
+        path="/free-guide"
+      />
       <Navbar />
 
       {/* Hero */}

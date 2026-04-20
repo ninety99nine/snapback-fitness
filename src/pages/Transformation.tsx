@@ -1,5 +1,6 @@
 import { useRef } from "react";
 import { Link } from "react-router-dom";
+import SEO from "@/components/SEO";
 import { motion, useInView, useScroll, useTransform } from "framer-motion";
 import { Heart, Quote, ArrowRight, Star, Flame, Trophy, Users } from "lucide-react";
 import Navbar from "@/components/layout/Navbar";
@@ -184,6 +185,11 @@ const Transformation = () => {
 
   return (
     <div className="min-h-screen flex flex-col bg-[#08040F]">
+      <SEO
+        title="Real Transformations — Women Who Did It"
+        description="See the real results from women across Botswana who trained with SnapBack Fitness. Real stories, real bodies, real change."
+        path="/transformation"
+      />
       <Navbar />
 
       {/* ── Hero ────────────────────────────────────────────────────────── */}

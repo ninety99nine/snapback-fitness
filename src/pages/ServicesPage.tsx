@@ -1,6 +1,7 @@
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 import { Link, useSearchParams } from "react-router-dom";
+import SEO from "@/components/SEO";
 const postpartumImg = "/images/postpartum-moms.png";
 const everyWomanImg = "/images/every-woman.png";
 const girlsTeensImg = "/images/girls-and-teens.png";
@@ -307,6 +308,11 @@ export default function ServicesPage() {
 
   return (
     <div className="min-h-screen bg-off-white">
+      <SEO
+        title="Fitness Plans for Every Woman"
+        description="Virtual training, customised meal plans, structured workout programmes, and in-person training in Maun. Every plan built around your life and goals."
+        path="/services"
+      />
       <Navbar />
 
       {/* ── Hero ──────────────────────────────────────────────────────────── */}

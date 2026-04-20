@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { MessageCircle, Star, ShoppingBag, Package, Download, Tag, Clock } from "lucide-react";
+import SEO from "@/components/SEO";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import FloatingWhatsApp from "@/components/layout/FloatingWhatsApp";
@@ -176,6 +177,11 @@ const Shop = () => {
 
   return (
     <div className="min-h-screen">
+      <SEO
+        title="Shop Fitness Equipment & Digital Products"
+        description="Shop resistance bands, yoga mats, jump ropes, and digital fitness guides from SnapBack Fitness. Quality equipment for your home or gym workouts."
+        path="/shop"
+      />
       <Navbar />
 
       {/* ── Hero ──────────────────────────────────────────────────── */}

@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
+import SEO from "@/components/SEO";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import FloatingWhatsApp from "@/components/layout/FloatingWhatsApp";
@@ -58,6 +59,11 @@ export default function Contact() {
 
   return (
     <div className="min-h-screen bg-dark">
+      <SEO
+        title="Contact SnapBack Fitness"
+        description="Get in touch with Patlo via WhatsApp or the contact form. Based in Maun, Botswana. Book a free 15-minute consultation today."
+        path="/contact"
+      />
       <Navbar />
 
       {/* ── Hero ─────────────────────────────────────────────────────────── */}

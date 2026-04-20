@@ -10,7 +10,7 @@ export const siteConfig = {
    * Format: country code + number, digits only. No +, spaces, or dashes.
    * Example: South Africa +27 82 123 4567 → "27821234567"
    */
-  whatsappNumber: "27000000000",
+  whatsappNumber: "26774268899",
 
   /**
    * Direct URL to the free postpartum guide PDF.

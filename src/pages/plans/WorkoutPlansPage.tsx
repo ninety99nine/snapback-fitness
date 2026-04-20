@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import FloatingWhatsApp from "@/components/layout/FloatingWhatsApp";
+import SEO from "@/components/SEO";
 import { ArrowRight, ArrowLeft, Check, MessageCircle, Dumbbell, ClipboardCheck, Calendar } from "lucide-react";
 
 const WA_NUMBER = "26774268899";
@@ -120,6 +121,11 @@ Please build my personalised workout plan! 💪`;
 
   return (
     <div className="min-h-screen bg-off-white">
+      <SEO
+        title="Structured Workout Plans — Home or Gym"
+        description="Structured weekly workout programmes with the right balance of training and rest — whether you're at home or at a gym. P300/month."
+        path="/plans/workout-plans"
+      />
       <Navbar />
 
       {/* Hero */}

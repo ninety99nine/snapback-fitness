@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import FloatingWhatsApp from "@/components/layout/FloatingWhatsApp";
+import SEO from "@/components/SEO";
 import { ArrowRight, ArrowLeft, Check, MessageCircle, MapPin, Users, Star } from "lucide-react";
 
 const WA_NUMBER = "26774268899";
@@ -118,6 +119,11 @@ I'm excited to train with you in person! When can we start? 🏋️‍♀️`;
 
   return (
     <div className="min-h-screen bg-off-white">
+      <SEO
+        title="In-Person Personal Training in Maun, Botswana"
+        description="One-on-one coaching sessions in Maun with real-time form correction and goal-aligned training. The most hands-on experience available. P600/session."
+        path="/plans/personal-training"
+      />
       <Navbar />
 
       {/* Hero */}

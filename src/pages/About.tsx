@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import SEO from "@/components/SEO";
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 import { ArrowRight, Heart, Instagram, Facebook } from "lucide-react";
@@ -82,6 +83,11 @@ const About = () => {
 
   return (
     <div className="min-h-screen flex flex-col bg-[#08040F]">
+      <SEO
+        title="About Patlo — SnapBack Fitness Founder"
+        description="Patlo Kgosidialwa started SnapBack Fitness after her own postpartum journey. Learn her story and how she has helped 200+ women across Botswana transform their lives."
+        path="/about"
+      />
       <Navbar />
 
       {/* ── Hero ─────────────────────────────────────────────────────────── */}

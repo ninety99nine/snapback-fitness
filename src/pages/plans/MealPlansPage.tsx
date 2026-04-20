@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import FloatingWhatsApp from "@/components/layout/FloatingWhatsApp";
+import SEO from "@/components/SEO";
 import { ArrowRight, ArrowLeft, Check, MessageCircle, Utensils, Target, Clock } from "lucide-react";
 
 const WA_NUMBER = "26774268899";
@@ -133,6 +134,11 @@ Please set up my personalised nutrition plan! 🥗`;
 
   return (
     <div className="min-h-screen bg-off-white">
+      <SEO
+        title="Custom Meal Plans — Nutrition Built for Your Body & Goals"
+        description="A personalised meal plan built around your body, your goals, and your lifestyle — not a generic template. Includes recipes and shopping guidance. P400/month."
+        path="/plans/meal-plans"
+      />
       <Navbar />
 
       {/* Hero */}

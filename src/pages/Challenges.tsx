@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { ArrowRight, MessageCircle, Camera, Mic, Zap, Users } from "lucide-react";
+import SEO from "@/components/SEO";
 import Navbar from "@/components/layout/Navbar";
 
 const WhatsAppIcon = ({ className }: { className?: string }) => (
@@ -162,6 +163,11 @@ const ORBS = [
 const Challenges = () => {
   return (
     <div className="min-h-screen">
+      <SEO
+        title="Join Our Fitness Communities & Challenges"
+        description="Join The SnapBack Moms or Glow Up Collective — weekly challenges, accountability, and real support for women at every stage of their fitness journey."
+        path="/challenges"
+      />
       <Navbar />
 
       {/* Hero */}

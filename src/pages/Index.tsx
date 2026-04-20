@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
+import SEO from "@/components/SEO";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import FloatingWhatsApp from "@/components/layout/FloatingWhatsApp";
@@ -32,6 +33,11 @@ const Index = () => {
 
   return (
     <div className="min-h-screen">
+      <SEO
+        title="Postpartum Fitness & Women's Wellness in Botswana"
+        description="Real coaching, customised meal plans, and workouts built around your life. SnapBack Fitness helps women across Botswana reclaim their strength and confidence."
+        path="/"
+      />
       <Navbar />
       <HeroSection />
       <PainPointsSection />
