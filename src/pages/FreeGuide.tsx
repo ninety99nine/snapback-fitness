@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
-import { Download, CheckCircle2, ArrowLeft } from "lucide-react";
+import { Download, CheckCircle2, ArrowLeft, Loader2 } from "lucide-react";
 import { Link } from "react-router-dom";
+import { useState } from "react";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import FloatingWhatsApp from "@/components/layout/FloatingWhatsApp";
@@ -19,6 +20,17 @@ const WHAT_YOU_GET = [
 ];
 
 export default function FreeGuide() {
+  const [downloading, setDownloading] = useState(false);
+
+  const handleDownload = () => {
+    setDownloading(true);
+    const a = document.createElement("a");
+    a.href = guidePdfUrl;
+    a.download = "SnapBack-Fitness-Free-Guide.pdf";
+    a.click();
+    setTimeout(() => setDownloading(false), 3000);
+  };
+
   return (
     <div className="min-h-screen bg-off-white">
       <Navbar />
@@ -77,14 +89,23 @@ export default function FreeGuide() {
               </ul>
 
               {/* Download CTA */}
-              <a
-                href={guidePdfUrl}
-                download="SnapBack-Fitness-Free-Guide.pdf"
-                className="flex items-center justify-center gap-3 gradient-cta text-white w-full py-4 rounded-2xl font-body text-sm font-semibold tracking-wide-custom hover:opacity-90 hover:scale-[1.02] transition-all shadow-lg shadow-secondary/25 mb-4"
+              <button
+                onClick={handleDownload}
+                disabled={downloading}
+                className="flex items-center justify-center gap-3 gradient-cta text-white w-full py-4 rounded-2xl font-body text-sm font-semibold tracking-wide-custom hover:opacity-90 hover:scale-[1.02] transition-all shadow-lg shadow-secondary/25 mb-4 disabled:opacity-80 disabled:scale-100 disabled:cursor-not-allowed"
               >
-                <Download className="h-4 w-4" />
-                DOWNLOAD THE FREE GUIDE
-              </a>
+                {downloading ? (
+                  <>
+                    <Loader2 className="h-4 w-4 animate-spin" />
+                    DOWNLOADING…
+                  </>
+                ) : (
+                  <>
+                    <Download className="h-4 w-4" />
+                    DOWNLOAD THE FREE GUIDE
+                  </>
+                )}
+              </button>
 
               {/* WhatsApp alternative */}
               <a
