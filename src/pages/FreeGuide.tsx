@@ -11,10 +11,10 @@ const { whatsappNumber, guidePdfUrl } = siteConfig;
 const WA_URL = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent("Hi Patlo! I'd love the free postpartum fitness guide 🙏")}`;
 
 const WHAT_YOU_GET = [
-  "The 5 things every postpartum woman must know before starting fitness",
-  "Why most programmes fail postpartum moms — and what actually works",
-  "How to start moving again safely, no matter how long it's been",
-  "Simple habits you can build around a newborn and real life",
+  "How to rebuild your strength and core from the ground up",
+  "The mindset shifts that make fitness finally stick long-term",
+  "Nutrition basics that fuel your comeback without overcomplicating it",
+  "Why most programmes fail women — and what actually works",
   "A clear first step so you're not guessing where to begin",
 ];
 
@@ -43,7 +43,7 @@ export default function FreeGuide() {
               YOUR FREE<br />STARTER GUIDE.
             </h1>
             <p className="font-body text-base text-white/60 max-w-xl mx-auto leading-relaxed">
-              5 things every postpartum woman must know before beginning her fitness journey. From Patlo. No cost. No email. Just tap and it's yours.
+              Your roadmap to reclaiming your strength, body, and confidence — covering strength, mindset, and nutrition. From Patlo. No cost. No email. Just tap and it's yours.
             </p>
           </motion.div>
         </div>

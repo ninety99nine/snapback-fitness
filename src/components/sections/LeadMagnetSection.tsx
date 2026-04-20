@@ -20,7 +20,7 @@ const LeadMagnetSection = () => {
             BEFORE YOU START — READ THIS.
           </h2>
           <p className="font-body text-base text-foreground/70 mb-3">
-            5 things every postpartum woman must know before beginning her fitness journey. From Patlo. No cost.
+            Your roadmap to reclaiming your strength, body, and confidence. From Patlo. No cost.
           </p>
           <p className="font-body text-sm text-foreground/40 mb-10">
             No sign-up. No email. Just tap and it's yours.
